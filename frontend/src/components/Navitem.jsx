@@ -1,9 +1,29 @@
 import React from 'react';
+import styled from 'styled-components';
 
+const A = styled.a`
+    justify-content: center;
+`;
+
+const Item = styled.button`
+    background-color: transparent;
+    border: none;
+    color: #7FFE02;
+    font-weight: bold;
+    font-size: 5vh;
+    margin: 30px;
+    vertical-align: center;
+    outline: none;
+    transition: color 1s;
+    :hover {
+        cursor: pointer;
+        color: green;
+    }
+`;
 export default function Navitem(props) {
-    return <a href={props.link}>
-        <button>
+    return <A href={props.link}>
+        <Item>
             {props.name}
-        </button>
-    </a>
+        </Item>
+    </A>
 }
