@@ -14,10 +14,11 @@ const Item = styled.button`
     margin: 30px;
     vertical-align: center;
     outline: none;
-    transition: color 1s;
+    transition: color 1s, transform 1s;
     :hover {
         cursor: pointer;
         color: green;
+        transform: scale(1.05);
     }
 `;
 export default function Navitem(props) {
