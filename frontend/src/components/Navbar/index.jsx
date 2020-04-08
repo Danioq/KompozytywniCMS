@@ -1,6 +1,6 @@
 import React from 'react';
 import Navitem from './Navitem'
-import Logo from './Logo'
+import Logo from 'components/Logo'
 import styled from 'styled-components';
 
 
