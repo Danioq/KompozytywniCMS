@@ -22,8 +22,11 @@ function App() {
       <Router>
         <MainContainer>
           <Navbar/>
-          
+
           <Switch>
+            <Route path="/">
+              <About />
+            </Route>
             <Route path="/about">
               <About />
             </Route>
