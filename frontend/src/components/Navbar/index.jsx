@@ -15,10 +15,10 @@ const Nav = styled.nav`
 
 export default function Navbar() {
     return <Nav>
-        <Logo link="#"/>
-        <Navitem name="Aktualności" link="#"/>
-        <Navitem name="O Nas" link="#"/>
-        <Navitem name="Projekty" link="#"/>
-        <Navitem name="Galeria" link="#"/>
+        <Logo link="/"/>
+        <Navitem name="Aktualności" link="/news"/>
+        <Navitem name="O Nas" link="/about"/>
+        <Navitem name="Projekty" link="/projects"/>
+        <Navitem name="Galeria" link="/galery"/>
     </Nav>;
 }

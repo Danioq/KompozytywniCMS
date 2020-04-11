@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
-const A = styled.a`
-    justify-content: center;
-`;
+import {Link} from 'react-router-dom';
 
 const Item = styled.button`
     background-color: transparent;
@@ -22,9 +19,9 @@ const Item = styled.button`
     }
 `;
 export default function Navitem(props) {
-    return <A href={props.link}>
+    return <Link to={props.link}>
         <Item>
             {props.name}
         </Item>
-    </A>
+    </Link>
 }
