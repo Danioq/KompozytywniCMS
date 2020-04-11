@@ -21,8 +21,7 @@ function App() {
   return (
       <Router>
         <MainContainer>
-          <Navbar/>
-          
+          <Navbar/>         
           <Switch>
             <Route exact path="/">
               <News />
