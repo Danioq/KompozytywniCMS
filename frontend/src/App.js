@@ -24,6 +24,9 @@ function App() {
           <Navbar/>
           
           <Switch>
+            <Route exact path="/">
+              <News />
+            </Route>
             <Route path="/about">
               <About />
             </Route>

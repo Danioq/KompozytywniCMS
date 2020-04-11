@@ -14,7 +14,6 @@ const Item = styled.button`
     transition: color 1s, transform 1s;
     :hover {
         cursor: pointer;
-        color: green;
         transform: scale(1.05);
     }
 `;

@@ -6,6 +6,11 @@ const Image = styled.img`
     height: 100%;
     margin: 10px;
     padding-right: 10px;
+    transition: transform 1s;
+    :hover{
+        transform: scale(1.05);
+        cursor: pointer;
+    }
 `;
 
 const A = styled.a`
