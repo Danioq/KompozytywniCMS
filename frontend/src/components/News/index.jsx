@@ -4,6 +4,7 @@ import NewsBasic from 'components/News/NewsBasic';
 import image from 'images/industry_news.jpg'
 
 const NewsContainer = styled.div`
+    margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-flow: row;
@@ -12,7 +13,6 @@ const NewsContainer = styled.div`
 `;
 
 export default function News(props) {
-    const news = [];
     const data = [{
         title: 'title1',
         photo: image,
@@ -34,15 +34,13 @@ export default function News(props) {
         addDate: '11.04.2020',
         addTime: '15:00'
     }];
-    for (const [index, value] of data.entries()) {
-        news.push(<NewsBasic title = {value.title} 
-            photo = {value.photo} 
-            textContent = {value.textContent} 
-            addDate = {value.addDate}
-            addTime = {value.addTime}/>)
-    }
     return (<NewsContainer>
-        {news}
+        {data.map(elem => 
+            <NewsBasic  title={elem.title}
+                        photo = {elem.photo}
+                        textContent = {elem.textContent}
+                        addDate = {elem.addDate}
+                        addTime = {elem.addTime} />)}
     </NewsContainer>
     )
 }
