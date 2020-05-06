@@ -7,6 +7,7 @@ import {Switch, BrowserRouter as Router, Route} from 'react-router-dom';
 import News from './components/News';
 import Projects from './components/Projects';
 import Galery from './components/Galery';
+import Admin from './components/Admin'
 
 const MainContainer = styled.div`
   width: 80vw;
@@ -37,6 +38,9 @@ function App() {
             </Route>
             <Route path="/galery">
               <Galery />
+            </Route>
+            <Route path="/admin">
+              <Admin/>
             </Route>
           </Switch>
         </MainContainer>

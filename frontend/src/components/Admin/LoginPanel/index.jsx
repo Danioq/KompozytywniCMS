@@ -1,6 +1,19 @@
 import React from 'react';
-import styled from 'styled-components';
+import {LoginForm,
+        Tittle,
+        LabelLogin,
+        LabelPassword,
+        LoginInput,
+        PasswordInput,
+        LoginButton} from './styledElements';
 
-export default function LoginPanel() {
-    return <div></div>;
+export default function LoginPanel(props) {
+    return <LoginForm>
+        <Tittle>Panel Logowania</Tittle>
+        <LabelLogin>Login</LabelLogin>
+        <LoginInput />
+        <LabelPassword>Hasło</LabelPassword>
+        <PasswordInput />
+        <LoginButton onClick={props.login} />
+    </LoginForm>;
 }
