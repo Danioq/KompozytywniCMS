@@ -1,4 +1,4 @@
-package io.kompozytywni.api;
+package io.kompozytywni.controller;
 
 import io.kompozytywni.model.KompozytywniUser;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
 import javax.validation.constraints.*;
+import java.util.List;
 
 @RequestMapping
 public interface UserApi {
@@ -17,7 +18,7 @@ public interface UserApi {
     @RequestMapping(value = "/users",
             produces = { "application/json" },
             method = RequestMethod.GET)
-    ResponseEntity<Void> getUsers();
+    ResponseEntity<List<KompozytywniUser>> getUsers();
 
     @RequestMapping(value = "/user",
         produces = { "application/json" }, 

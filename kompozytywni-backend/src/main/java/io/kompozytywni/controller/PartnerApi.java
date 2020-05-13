@@ -1,4 +1,4 @@
-package io.kompozytywni.api;
+package io.kompozytywni.controller;
 
 import io.kompozytywni.model.Partner;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 import javax.validation.Valid;
+import java.util.List;
 
 @RequestMapping
 public interface PartnerApi {
@@ -17,7 +18,7 @@ public interface PartnerApi {
     @RequestMapping(value = "/partners",
             produces = { "application/json" },
             method = RequestMethod.GET)
-    ResponseEntity<Void> getPartners();
+    ResponseEntity<List<Partner>> getPartners();
 
     @RequestMapping(value = "/partner",
         produces = { "application/json" }, 

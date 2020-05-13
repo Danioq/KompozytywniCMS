@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = { "io.kompozytywni", "io.kompozytywni.api", "io.kompozytywni.configuration", "io.kompozytywni.model", "io.kompozytywni.repository" })
+@ComponentScan(basePackages = { "io.kompozytywni", "io.kompozytywni.controller", "io.kompozytywni.configuration", "io.kompozytywni.model", "io.kompozytywni.repository" })
 public class KompozytywniMain implements CommandLineRunner {
 
     @Override

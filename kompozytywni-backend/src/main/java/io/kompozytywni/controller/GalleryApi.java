@@ -1,6 +1,6 @@
-package io.kompozytywni.api;
+package io.kompozytywni.controller;
 
-import io.kompozytywni.model.Member;
+import io.kompozytywni.model.Gallery;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,38 +13,38 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.validation.Valid;
 
 @RequestMapping
-public interface MemberApi {
+public interface GalleryApi {
 
-    @RequestMapping(value = "/members",
+    @RequestMapping(value = "/galleries",
             produces = { "application/json" },
             method = RequestMethod.GET)
-    ResponseEntity<Void> getMembers();
+    ResponseEntity<Void> getGalleries();
 
-    @RequestMapping(value = "/member",
+    @RequestMapping(value = "/gallery",
         produces = { "application/json" }, 
         consumes = { "application/json" },
         method = RequestMethod.POST)
-    ResponseEntity<Void> addMember(@Valid @RequestBody Member body);
+    ResponseEntity<Void> addGallery(@Valid @RequestBody Gallery body);
 
-    @RequestMapping(value = "/member/{memberId}",
+    @RequestMapping(value = "/gallery/{galleryId}",
         produces = { "application/json" }, 
         method = RequestMethod.DELETE)
-    ResponseEntity<Void> deleteMember(@PathVariable("memberId") Long memberId);
+    ResponseEntity<Void> deleteGallery(@PathVariable("galleryId") Long galleryId);
 
-    @RequestMapping(value = "/member/{memberId}",
+    @RequestMapping(value = "/gallery/{galleryId}",
         produces = { "application/json" }, 
         method = RequestMethod.GET)
-    ResponseEntity<Member> getMemberById(@PathVariable("memberId") Long memberId);
+    ResponseEntity<Gallery> getGalleryById(@PathVariable("galleryId") Long galleryId);
 
-    @RequestMapping(value = "/member/{memberId}",
+    @RequestMapping(value = "/gallery/{galleryId}",
         produces = { "application/json" }, 
         consumes = { "application/json" },
         method = RequestMethod.PUT)
-    ResponseEntity<Void> updateMember(@Valid @RequestBody Member body, @PathVariable("memberId") Long memberId);
+    ResponseEntity<Void> updateGallery(@Valid @RequestBody Gallery body, @PathVariable("galleryId") Long galleryId);
 
-    @RequestMapping(value = "/member/{memberId}/uploadImage",
+    @RequestMapping(value = "/gallery/{galleryId}/uploadImage",
         produces = { "application/json" }, 
         consumes = { "multipart/form-data" },
         method = RequestMethod.POST)
-    ResponseEntity<Void> uploadImageToMember(@PathVariable("memberId") Long memberId, @RequestParam(value="additionalMetadata", required=false)  String additionalMetadata, @Valid @RequestPart(value="photo", required=false) MultipartFile photo);
+    ResponseEntity<Void> uploadImageToGallery(@PathVariable("galleryId") Long galleryId, @RequestParam(required=false)  String additionalMetadata, @Valid @RequestPart(value="photo", required=false) MultipartFile photo);
 }

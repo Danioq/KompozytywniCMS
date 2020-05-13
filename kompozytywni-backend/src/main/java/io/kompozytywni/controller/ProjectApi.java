@@ -1,4 +1,4 @@
-package io.kompozytywni.api;
+package io.kompozytywni.controller;
 
 import io.kompozytywni.model.Project;
 import org.springframework.http.ResponseEntity;

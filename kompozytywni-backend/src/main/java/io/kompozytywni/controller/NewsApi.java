@@ -1,4 +1,4 @@
-package io.kompozytywni.api;
+package io.kompozytywni.controller;
 
 import io.kompozytywni.model.News;
 import org.springframework.http.ResponseEntity;
@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import javax.validation.Valid;
+import java.util.List;
 
 @RequestMapping
 public interface NewsApi {
@@ -14,7 +15,7 @@ public interface NewsApi {
     @RequestMapping(value = "/news",
             produces = { "application/json" },
             method = RequestMethod.GET)
-    ResponseEntity<Void> getNews();
+    ResponseEntity<List<News>> getNews();
 
     @RequestMapping(value = "/news",
         produces = { "application/json" }, 

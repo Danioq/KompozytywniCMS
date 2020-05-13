@@ -1,4 +1,4 @@
-package io.kompozytywni.api;
+package io.kompozytywni.controller;
 
 import io.kompozytywni.model.Project;
 import io.kompozytywni.repository.ProjectRepository;
@@ -48,8 +48,12 @@ public class ProjectApiController implements ProjectApi {
     }
 
     public ResponseEntity<Void> updateProject(Project body, Long projectId) {
-        String accept = request.getHeader("Accept");
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        Project project = projectRepository.getOne(projectId);
+        project.setName(body.getName());
+        project.setDescription(body.getDescription());
+        project.setPhotos(body.getPhotos());
+        projectRepository.save(project);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     public ResponseEntity<Void> uploadImageToProject(Long projectId, String additionalMetadata, MultipartFile photo) {
