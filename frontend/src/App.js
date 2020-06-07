@@ -14,7 +14,8 @@ const MainContainer = styled.div`
   background-color: white;
   justify-self: center;
   margin: auto;
-  height: 100vh;
+  min-height: 100vh;
+  bottom: 0;
 `;
 
 

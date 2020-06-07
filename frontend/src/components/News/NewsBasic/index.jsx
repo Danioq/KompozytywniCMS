@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import NewsBasicContent from 'components/News/NewsBasic/NewsBasicContent';
 import NewsBasicImage from 'components/News/NewsBasic/NewsBasicImage';
 
-const NewsTile = styled.div`
-  width: 550px;
-  height: 240px;
+const NewsTile = styled.li`
+  width: 25vw;
+  height: 25vh;
 
   display: grid;
   grid-template-columns: 1fr, 2fr;
@@ -15,7 +15,6 @@ const NewsTile = styled.div`
   border: 5px solid;
   border-radius: 20px;
   border-color: #79DC08;
-
   &:hover {
     background: #C4C4C4;
   }
