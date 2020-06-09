@@ -8,6 +8,7 @@ export default function ProjectTitle(props) {
         <Picture src={props.photo} />
         <Title>{props.title}</Title>
         <Date>{props.addDate} {props.addTime}</Date>
-        <Text>{props.textContent}</Text>
+        <Text>{props.text}</Text>
+        
     </ProjectTitleContainer>
 }
