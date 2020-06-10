@@ -50,7 +50,7 @@ function MyVerticallyCenteredModal(props) {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title className = "title" id="contained-modal-title-vcenter">
+        <Modal.Title id="contained-modal-title-vcenter">
           <ProjectTitle title={props.title}
           photo = {props.photo} />
         </Modal.Title>

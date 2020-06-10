@@ -11,10 +11,20 @@
     border: 5px #7FFE02 solid;
     border-radius: 5vh;
     outline: none;
+    overflow: hidden;
 }
 
 .trigger:hover{
    background: #c4c4c4; 
    border: 5px #00FF00 solid;
 }
+
+.trigger:focus{
+    color: black;
+    background-color: #ffffff;
+    border: 5px #7FFE02 solid;
+    outline: 0;
+}
+
+
 

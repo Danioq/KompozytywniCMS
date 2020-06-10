@@ -10,7 +10,7 @@ import Galery from './components/Galery';
 import Admin from './components/Admin'
 
 const MainContainer = styled.div`
-  width: 80vw;
+  width: 85vw;
   background-color: white;
   justify-self: center;
   margin: auto;

@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-
+import styled from "styled-components";
 
 export let ProjectTitleContainer = styled.li`
     
@@ -14,18 +13,17 @@ export let ProjectTitleContainer = styled.li`
     justify-content: space-around;
     flex-wrap: wrap;
     position: relative;
-   outline: none;
-    
-    
+    outline: none;
+       
   }
 `;
 
 export let Picture = styled.img`
-    width: 15vh;
-    float: left;
-    margin-right: 2vh;
-    border-radius: 7.5vh;
-    flex-basis: 30%;
+  width: 15vh;
+  float: left;
+  margin-right: 2vh;
+  border-radius: 7.5vh;
+  flex-basis: 30%;
 `;
 
 export let Title = styled.h1``;
@@ -36,5 +34,4 @@ export let Date = styled.p`
   bottom: 40px;
 `;
 
- export let Text = styled.p`
- `;
+export let Text = styled.p``;
