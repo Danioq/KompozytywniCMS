@@ -1,0 +1,52 @@
+.photo-trigger{
+    width: 180px;
+    height: 280px;
+    background: transparent;
+    border: 0;
+    clear:both;
+    margin: 15px 10px 15px 10px;
+    padding: 10px;
+    justify-content: center;
+    color: black;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    overflow: hidden;
+    border: 3px solid #7FFE02;
+    opacity: 0.8;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.photo-trigger:hover{
+   color:black;
+   opacity: 1;
+    transform: scale(1.05);
+    transition: 0.3s all linear;
+    background: #f2f2f2; 
+    border: 3px #00FF00 solid;
+}
+
+.photo-trigger:focus{
+    color: black;
+    background-color: #ffffff;
+    border: 3px solid #7FFE02;
+    outline: 0;
+}
+
+
+.modal-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-content{ 
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}

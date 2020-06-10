@@ -11,12 +11,20 @@ const Item = styled.button`
     margin: 30px;
     vertical-align: center;
     outline: none;
+    outline-color: white;
     transition: color 1s, transform 1s;
     :hover {
         cursor: pointer;
         transform: scale(1.05);
     }
+    :focus {
+        outline: 0;
+
+    }
+    }
 `;
+    
+
 export default function Navitem(props) {
     return <Link to={props.link}>
         <Item>
